@@ -13,7 +13,6 @@ class StackService {
     }
     // adds to stack
     push(item) {
-        (item);
         if (item != null) {
             this.items.push(item);
         }

@@ -5,15 +5,9 @@ class KVService {
     constructor() {
         this.items = new Map();
     }
-    getMetadata(arg0) {
-        throw new Error("Method not implemented.");
-    }
-    size() {
-        throw new Error("Method not implemented.");
-    }
     set(key, data, ttl) {
-        if (key == undefined || key == "") {
-            throw new Error("Key is undefined");
+        if (key == undefined || key == '') {
+            throw new Error('Key is undefined');
         }
         let expiryTime = undefined;
         if (ttl != undefined && ttl > 0) {
