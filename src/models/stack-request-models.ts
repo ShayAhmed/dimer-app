@@ -4,8 +4,6 @@ export interface PostReq {
     }
 }
 
-export interface GetReq {}
-
 export const PostReqSchema = {
     body: {
         type: 'object',

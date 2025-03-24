@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "a3cfdf4c-e305-4cc3-be39-01336516ef48",
+		"name": "dimer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[KV] Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"123\",\r\n    \"value\": \"555\",\r\n    \"ttl\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/kv/set",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"kv",
+						"set"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[KV] Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/kv/get/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"kv",
+						"get",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[KV] Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/kv/delete/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"kv",
+						"delete",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Stack] Push",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":\"again\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/stack/push",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stack",
+						"push"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Stack] Pop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/stack/pop",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stack",
+						"pop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

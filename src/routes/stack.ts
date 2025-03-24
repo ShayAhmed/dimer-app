@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify'
-import { PostReq, GetReq, PostReqSchema, GetReqSchema } from '../models/stack-request-models'
+import { PostReq, PostReqSchema, GetReqSchema } from '../models/stack-request-models'
 import { StackService } from '../service/stack-service'
 
 const stackService = new StackService<string>()
@@ -28,7 +28,7 @@ export default async function stackRoute(fastify: FastifyInstance) {
         }
     })
 
-    fastify.get<GetReq>('/stack/pop', { schema: GetReqSchema }, async (req, reply) => {
+    fastify.get('/stack/pop', { schema: GetReqSchema }, async (req, reply) => {
         try {
             const item = stackService.pop()
             const size = stackService.size()

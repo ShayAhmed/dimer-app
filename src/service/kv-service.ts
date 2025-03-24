@@ -1,13 +1,7 @@
 import { Item } from '../models/kv-request-models'
 
 export class KVService<T> {
-    getMetadata(arg0: string) {
-        throw new Error('Method not implemented.')
-    }
-    size(): any {
-        throw new Error('Method not implemented.')
-    }
-    private items: Map<String, Item<T>> = new Map()
+    private items: Map<string, Item<T>> = new Map()
 
     public set(key: string, data: T, ttl?: number) {
         if (key == undefined || key == '') {

@@ -10,13 +10,15 @@ There are 2 parts to this app
 To run the app, run the following commands:
 
 ```bash
-tar -xf fastify-dimer-app.tar
+tar -xf fastify-dimer-app.tar.gz
 npm install
 npm test
 npm start
 ```
 
 ## Api Docs
+
+Postman collection attached under file ```dimer.postman_collection.json```
 
 ### LIFO Stack
 
