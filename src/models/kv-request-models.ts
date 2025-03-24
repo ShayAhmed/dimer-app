@@ -25,26 +25,26 @@ export interface DeleteReq {
 
 export const SetReqSchema = {
     body: {
-        type: "object",
-        required: ["key", "value"],
+        type: 'object',
+        required: ['key', 'value'],
         properties: {
-            message: { type: "string" },
-            value: { type: "string" },
-            ttl: { type: "number", minimum: 0 },
+            message: { type: 'string' },
+            value: { type: 'string' },
+            ttl: { type: 'number', minimum: 0 },
         },
     },
     response: {
         200: {
-            type: "object",
+            type: 'object',
             properties: {
-                message: { type: "string" }
+                message: { type: 'string' },
             },
         },
         400: {
-            type: "object",
+            type: 'object',
             properties: {
-                error: { type: "string" },
-                message: { type: "string" },
+                error: { type: 'string' },
+                message: { type: 'string' },
             },
         },
     },
@@ -52,24 +52,24 @@ export const SetReqSchema = {
 
 export const GetReqSchema = {
     params: {
-        type: "object",
-        required: ["key"],
+        type: 'object',
+        required: ['key'],
         properties: {
-            key: { type: "string" },
+            key: { type: 'string' },
         },
     },
     response: {
         200: {
-            type: "object",
+            type: 'object',
             properties: {
-                value: { type: ["string", "null"] }
+                value: { type: ['string', 'null'] },
             },
         },
         400: {
-            type: "object",
+            type: 'object',
             properties: {
-                error: { type: "string" },
-                message: { type: "string" },
+                error: { type: 'string' },
+                message: { type: 'string' },
             },
         },
     },
@@ -77,24 +77,24 @@ export const GetReqSchema = {
 
 export const DeleteReqSchema = {
     params: {
-        type: "object",
-        required: ["key"],
+        type: 'object',
+        required: ['key'],
         properties: {
-            key: { type: "string" },
+            key: { type: 'string' },
         },
     },
     response: {
         200: {
-            type: "object",
+            type: 'object',
             properties: {
-                message: { type: "string" }
+                message: { type: 'string' },
             },
         },
         400: {
-            type: "object",
+            type: 'object',
             properties: {
-                error: { type: "string" },
-                message: { type: "string" },
+                error: { type: 'string' },
+                message: { type: 'string' },
             },
         },
     },

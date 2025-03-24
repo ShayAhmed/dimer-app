@@ -10,7 +10,7 @@ export class StackService<T> {
 
     // adds to stack
     public push(item: T) {
-        (item);
+        item
         if (item != null) {
             this.items.push(item)
         }

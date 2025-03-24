@@ -8,24 +8,24 @@ export interface GetReq {}
 
 export const PostReqSchema = {
     body: {
-        type: "object",
-        required: ["data"],
+        type: 'object',
+        required: ['data'],
         properties: {
-            data: { type: "string" },
+            data: { type: 'string' },
         },
     },
     response: {
         200: {
-            type: "object",
+            type: 'object',
             properties: {
-                message: { type: "string" }
+                message: { type: 'string' },
             },
         },
         400: {
-            type: "object",
+            type: 'object',
             properties: {
-                error: { type: "string" },
-                message: { type: "string" },
+                error: { type: 'string' },
+                message: { type: 'string' },
             },
         },
     },
@@ -34,17 +34,17 @@ export const PostReqSchema = {
 export const GetReqSchema = {
     response: {
         200: {
-            type: "object",
+            type: 'object',
             properties: {
-                item: { type: "string" },
-                size: { type: "number" },
+                item: { type: 'string' },
+                size: { type: 'number' },
             },
         },
         404: {
-            type: "object",
+            type: 'object',
             properties: {
-                error: { type: "string" },
-                message: { type: "string" },
+                error: { type: 'string' },
+                message: { type: 'string' },
             },
         },
     },

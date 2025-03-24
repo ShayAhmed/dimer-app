@@ -1,17 +1,17 @@
-import { Item } from "../models/kv-request-models"
+import { Item } from '../models/kv-request-models'
 
 export class KVService<T> {
     getMetadata(arg0: string) {
-        throw new Error("Method not implemented.")
+        throw new Error('Method not implemented.')
     }
     size(): any {
-        throw new Error("Method not implemented.")
+        throw new Error('Method not implemented.')
     }
     private items: Map<String, Item<T>> = new Map()
 
     public set(key: string, data: T, ttl?: number) {
-        if (key == undefined || key == "") {
-            throw new Error("Key is undefined");
+        if (key == undefined || key == '') {
+            throw new Error('Key is undefined')
         }
 
         let expiryTime: number | undefined = undefined
