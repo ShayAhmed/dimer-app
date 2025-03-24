@@ -49,7 +49,7 @@ Response
 ```json
 {
     "item": "data-in-stack",
-    "size": 0 //remaining size of stack
+    "size": 0
 }
 ```
 
